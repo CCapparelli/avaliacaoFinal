@@ -14,15 +14,16 @@
     <link rel="stylesheet" href="/src/user/css/index.css">
     <link rel="stylesheet" href="css/index.css">
     <!-- css fim -->
-    <link rel="shortcut icon" href="/src/user/img/logo/logoWhite.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/src/user/img/logo/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa</title>
 </head>
 
-<body data-bs-theme="light" class="d-flex flex-column justify-content-between">
+<body data-bs-theme="light" >
+    <div style="height:85px;"></div>
     <header class="header container-flud d-flex flex-row justify-content-between align-items-center p-3 fixed-top"> 
         <div class="d-flex flex-row  gap-3">
-            <!-- <img class="imgLogo" src="/src/user/img/logo/..." alt=""> -->
+            <img class="imgLogo" src="/src/user/img/logo/logo.png" alt="">
             <p class="cArrow">Name</p>
         </div>
         <div class="headerNav">
@@ -37,12 +38,46 @@
         </div>
     </header>
 
-    <main class="container d-flex align-items-center">
-
-        <h1>About</h1>
+    <main class="container-fluid p-0 m-0 d-flex flex-column justify-content-start">
+        <h4 class="p-0 align-self-center">SOBRE NÓS</h4>
+        <section class="aboutUs d-flex flex-column p-3 gap-4">
+            <div class="aboutUsItem d-flex gap-3">
+                <div class="aboutUsLeft">
+                    <p class="p-0 m-0 fw-bold">Nossa missão</p>
+                    <p class="p-0 m-0 small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat tempore deserunt blanditiis pariatur velit delectus quam fuga soluta, doloribus repellat. Quisquam rem nemo, est quo maiores totam cumque sed ea!</p>
+                </div>
+                <div class="aboutUsRight d-flex justify-content-around">
+                    <img class="aboutUsImg rounded-4" src="/src/user/img/sobreMissão.jpg" alt="">
+                </div>
+            </div>
+            <div class="aboutUsItem d-flex flex-row-reverse gap-3">
+                <div class="aboutUsLeft">
+                    <p class="p-0 m-0 fw-bold">Como ajudaremos?</p>
+                    <p class="p-0 m-0 small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi eaque delectus fugit dicta, unde nulla ab eveniet libero illum, nemo quaerat repudiandae voluptas est laudantium iusto illo asperiores cumque molestiae!</p>
+                </div>
+                <div class="aboutUsRight d-flex justify-content-around">
+                    <img class="aboutUsImg rounded-4" src="/src/user/img/sobreComo.png" alt="">
+                </div>
+            </div>
+            <div class="aboutUsItem d-flex gap-3">
+                <div class="aboutUsLeft">
+                    <p class="p-0 m-0 fw-bold">Natureza e sustentabilidade</p>
+                    <p class="p-0 m-0 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus, quidem tempore recusandae, consequatur laborum et ipsum assumenda quibusdam delectus minima aliquid eos sit atque, earum debitis eligendi nulla? Similique!</p>
+                </div>
+                <div class="aboutUsRight d-flex justify-content-around">
+                    <img class="aboutUsImg rounded-4" src="/src/user/img/sobreSustentabilidade.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        
+        <h4 class="p-0 align-self-center">GALERIA</h4>
+        <section class="galery mt-0 mb-3">
+            <!-- <img class="imgGalery" src="/src/user/img/logo/..." alt=""> -->
+        </section>
+                
     </main>
 
-    <footer class="footer container-fluid d-flex flex-column justify-content-center align-items-center">
+    <footer class="footer d-flex flex-column justify-content-center align-items-center">
         <div class="footerTop ">
             <div class="footerContatos d-flex flex-column align-items-start">
                 <h5 class="m-0 p-0 mt-4 fw-bold">Contatos</h5>

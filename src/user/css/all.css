@@ -118,22 +118,16 @@ body, header, footer {
 }
 
 body {
-    color: var(--colorBlackish);
+    /* color: var(--colorBlackish);
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     background-color: var(--colorWhitish);
     animation: bgColor 3s;
 }
 
-main {
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    height: 100vh;
-}
 /* 
 header, footer, aside {
     width: 100%;
@@ -229,8 +223,9 @@ nav ul li {
 } */
 
 h1, h2, h3, h4, h5, h6 {
+    margin-top: 8px;
     padding: var(--spaceIn);
-    border-bottom: 2px solid var(--color4);
+    /* border-bottom: 2px solid var(--color4); */
 }
 
 p {
@@ -246,3 +241,9 @@ button {
 }
 
 
+.postAuthorImg {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color7);
+    border-radius: 100%;
+}

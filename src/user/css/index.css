@@ -11,9 +11,9 @@
 }
 
 /* trabalha em conjunto com a classe  HTML "d-flex flex-column justify-content-between" */
-body {
+/* body {
     height: 100vh;
-}
+} */
 /* trabalha em conjunto com a div HTML h-spacer */
 
 
@@ -53,21 +53,22 @@ input {
 
 /* sections */
 
-.banner {
-    margin-top: 80px;
-    height: 200px;
-}
-.bannerkRight {
+.bannerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 180px;
+    height: 180px;
     border-radius: 100%;
-    background-color: var(--color7);
+    background-color: var(--color4);
 }
-
 .world {
-    background-color: silver;
-    height: 300px;
 }
 .worldTop {
+    background-color: var(--color1)
+}
+.worldTopImg {
+
 }
 .worldTopLeft {
     width: 50%;
@@ -76,27 +77,34 @@ input {
     width: 50%;
     height: 200px;
     border-radius: 20px;
-    background-color: var(--color7);
+    background-color: var(--color4);
+    background-image: url(/src//user/img/exploreMundo.jpg);
+    background-size: cover;
 }
 .worldBottom {
-    height: 300px;
 }
 .worldBottomLeft {
     width: 50%;
 }
 .worldBottomRight {
     width: 50%;
-    height: 200px;
     border-radius: 20px;
 }
 .postImg {
     width: 150px;
     height: 150px;
-    background-color: var(--color7);
+    background-color: var(--color4);
 }
 
+.network {
+    background-color: var(--color1);
+}
 .networkTopRight img {
     width: 100px;
-    height: 150px;
-    background-color: var(--color7);
+    height: 180px;
+    background-color: var(--color4);
+}
+
+.divSearch {
+    width: 80%;
 }

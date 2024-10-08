@@ -1,0 +1,23 @@
+.galery {
+    height: 200px;
+    background-color: var(--color1);
+    margin: 0px var(--spaceOut);
+    margin-top: var(--spaceIn2);
+}
+
+.aboutUs {
+    background-color: var(--color1);
+}
+.aboutUsLeft {
+    width: 50%;
+}
+.aboutUsRight {
+    width: 50%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: var(--color4);
+}
+
+.post {
+    background-color: var(--colorWhitish);
+}
