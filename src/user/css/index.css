@@ -1,0 +1,102 @@
+:root {
+    --azul: #6EB3D0;
+    --verde: #B6D7A8;
+    --rosa: #F7B6D2;
+    --laranja: #F4A623;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+
+/* trabalha em conjunto com a classe  HTML "d-flex flex-column justify-content-between" */
+body {
+    height: 100vh;
+}
+/* trabalha em conjunto com a div HTML h-spacer */
+
+
+
+.copyright { margin-top: 15px; }
+.author { font-weight: bold; }
+.cArrow { cursor: default; }
+.cHand { cursor: pointer; }
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+h4 {
+    padding: 30px;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.header, .footer {
+    background-color: var(--color4);
+}
+.header img {
+    width: 50px;
+    height: 50px;
+}
+
+/* sections */
+
+.banner {
+    margin-top: 80px;
+    height: 200px;
+}
+.bannerkRight {
+    width: 180px;
+    border-radius: 100%;
+    background-color: var(--color7);
+}
+
+.world {
+    background-color: silver;
+    height: 300px;
+}
+.worldTop {
+}
+.worldTopLeft {
+    width: 50%;
+}
+.worldTopRight {
+    width: 50%;
+    height: 200px;
+    border-radius: 20px;
+    background-color: var(--color7);
+}
+.worldBottom {
+    height: 300px;
+}
+.worldBottomLeft {
+    width: 50%;
+}
+.worldBottomRight {
+    width: 50%;
+    height: 200px;
+    border-radius: 20px;
+}
+.postImg {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color7);
+}
+
+.networkTopRight img {
+    width: 100px;
+    height: 150px;
+    background-color: var(--color7);
+}
