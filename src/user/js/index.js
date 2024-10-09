@@ -33,6 +33,7 @@ const body = document.querySelector("body");
 const btnToggleTheme = document.getElementById("btnToggleTheme");
 btnToggleTheme.addEventListener('click', toggleTheme);
 
+
 function toggleTheme(){
     if(body.getAttribute('data-bs-theme') == 'dark'){
         body.setAttribute('data-bs-theme','light');

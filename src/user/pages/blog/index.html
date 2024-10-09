@@ -40,7 +40,7 @@
 
     <main class="container-fluid p-0 m-0 d-flex flex-column justify-content-start">
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -65,22 +65,24 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
-        </div>
+        </section>
                           
         <h4 class="p-0 align-self-center">BLOG POSTS</h4>
         <section class="aboutUs d-flex flex-column gap-3 p-3">
             <div class="aboutUsRow d-flex flex-row gap-3">
                 <div class="post w-50 d-flex gap-2 p-3 rounded">
-                    <img class="postImg rounded" src="/src/user/img/explore1.jpg" alt="">
+                    <a href="/src/user/pages/posts/"><img class="postImg rounded-2" src="/src/user/img/explore1.jpg" alt=""></a>
                     <div class="d-flex flex-column justify-content-between">
-                        <div>
-                            <h6 class="p-0">NOME LUGAR</h6>
-                            <p class="p-0 m-0">SUBTITULO</p>
-                            <p class="p-0 m-0 small">LOREM</p>
+                        <div class="postInfo postOK">
+                            <h6 class="exploreName p-0 m-0 fs-5 fw-bold">Minha viagem ao Japão!</h6>
+                            <p class="exploreSubTitle p-0 m-0 fst-italic small">Data da postagem: 09/10/2024</p>
+                            <p class="exploreDesc p-0 m-0 mt-1 small align text-start">Breve introdução e comentários em relação ao conteúdo do post.</p>
                         </div>
-                        <div class="postAuthor">
-                            <img class="postAuthorImg" src="/src/user/img/original/time/alice.jpg" alt="">
-                            <span>Post por Alice</span>
+                        <div class="postInfo postAuthor postOK">
+                            <a href="/src/user/pages/posts/">
+                                <img class="postAuthorImg" src="/src/user/img/original/time/alice.jpg" alt="">
+                                <span>Posted by Alice</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -88,12 +90,12 @@
                 <div class="post w-50 d-flex gap-2 p-3 rounded">
                     <img class="postImg rounded" src="/src/user/img/explore2.jpg" alt="">
                     <div class="d-flex flex-column justify-content-between">
-                        <div>
-                            <h6 class="p-0">NOME LUGAR</h6>
-                            <p class="p-0 m-0">SUBTITULO</p>
-                            <p class="p-0 m-0 small">LOREM</p>
+                        <div class="postInfo">
+                            <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                            <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
+                            <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
                         </div>
-                        <div class="postAuthor">
+                        <div class="postInfo postAuthor">
                             <img class="postAuthorImg" src="/src/user/img/original/time/elizabeth.jpg" alt="">
                             <span>Post por Elizabeth</span>
                         </div>
@@ -105,12 +107,12 @@
                 <div class="post w-50 d-flex gap-2 p-3 rounded">
                     <img class="postImg rounded" src="/src/user/img/explore3.jpg" alt="">
                     <div class="d-flex flex-column justify-content-between">
-                        <div>
-                            <h6 class="p-0">NOME LUGAR</h6>
-                            <p class="p-0 m-0">SUBTITULO</p>
-                            <p class="p-0 m-0 small">LOREM</p>
+                        <div class="postInfo">
+                            <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                            <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
+                            <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
                         </div>
-                        <div class="postAuthor">
+                        <div class="postInfo postAuthor">
                             <img class="postAuthorImg" src="/src/user/img/original/time/sergio.jpg" alt="">
                             <span>Post por Sergio</span>
                         </div>
@@ -120,12 +122,12 @@
                 <div class="post w-50 d-flex gap-2 p-3 rounded">
                     <img class="postImg rounded" src="/src/user/img/network1.jpg" alt="">
                     <div class="d-flex flex-column justify-content-between">
-                        <div>
-                            <h6 class="p-0">NOME LUGAR</h6>
-                            <p class="p-0 m-0">SUBTITULO</p>
-                            <p class="p-0 m-0 small">LOREM</p>
+                        <div class="postInfo">
+                            <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                            <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
+                            <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
                         </div>
-                        <div class="postAuthor">
+                        <div class="postInfo postAuthor">
                             <img class="postAuthorImg" src="/src/user/img/network1.jpg" alt="">
                             <span>Post por João</span>
                         </div>
@@ -137,12 +139,12 @@
                 <div class="post w-50 d-flex gap-2 p-3 rounded">
                     <img class="postImg rounded" src="/src/user/img/network2.jpg" alt="">
                     <div class="d-flex flex-column justify-content-between">
-                        <div>
-                            <h6 class="p-0">NOME LUGAR</h6>
-                            <p class="p-0 m-0">SUBTITULO</p>
-                            <p class="p-0 m-0 small">LOREM</p>
+                        <div class="postInfo">
+                            <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                            <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
+                            <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
                         </div>
-                        <div class="postAuthor">
+                        <div class="postInfo postAuthor">
                             <img class="postAuthorImg" src="/src/user/img/network2.jpg" alt="">
                             <span>Post por Maria</span>
                         </div>
@@ -152,12 +154,12 @@
                 <div class="post w-50 d-flex gap-2 p-3 rounded">
                     <img class="postImg rounded" src="/src/user/img/network3.jpg" alt="">
                     <div class="d-flex flex-column justify-content-between">
-                        <div>
-                            <h6 class="p-0">NOME LUGAR</h6>
-                            <p class="p-0 m-0">SUBTITULO</p>
-                            <p class="p-0 m-0 small">LOREM</p>
+                        <div class="postInfo">
+                            <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                            <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
+                            <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
                         </div>
-                        <div class="postAuthor">
+                        <div class="postInfo postAuthor">
                             <img class="postAuthorImg" src="/src/user/img/network3.jpg" alt="">
                             <span>Post por José</span>
                         </div>
