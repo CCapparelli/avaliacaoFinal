@@ -1,4 +1,4 @@
-.galery {
+.carousel {
     height: 200px;
     background-color: var(--color1);
     margin: 0px var(--spaceOut);
@@ -20,4 +20,7 @@
 
 .post {
     background-color: var(--colorWhitish);
+}
+.carousel-item {
+    height: 200px;
 }

@@ -41,17 +41,22 @@
                     <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/about/">Sobre a empresa</a></li>
                     <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/blog/">Blog</a></li>
                     <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/team/">Nosso time</a></li>
+                    <button id="btnToggleTheme" class="btn" type="btn"><i class="fa fa-moon"></i></button>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container-fluid p-0 m-0 d-flex flex-column justify-content-start">
+
+
+
+
         <section class="banner d-flex justify-content-between p-3">
             <div class="bannerkLeft">
-                <h4 class="p-0">Titulo do WebSite</h4>
-                <p class="p-0 m-0">Subtitulo do WebSite</p>
-                <p class="p-0 m-0 small">Descricao</p>
+                <h4 class="p-0">Titulo do Website</h4>
+                <p class="p-0 m-0">Subtitulo do Website</p>
+                <p class="p-0 m-0 small">Descrição</p>
             </div>
             <div class="bannerkRight">
                 <img class="bannerImg" src="/src/user/img/original/time/sergio.jpg" alt="">
@@ -60,7 +65,7 @@
 
         <section class="world d-flex flex-column ">
             <div class="worldTop w-100 p-3 d-flex flex-column">
-                <h4 class="align-self-center p-0 mt-3">EXPLORE O MUNDO!</h4>
+                <h4 class="align-self-center p-0 mt-0">EXPLORE O MUNDO!</h4>
                 <div class="worldTopContent d-flex justify-content-between">
                     <div class="worldTopLeft">
                         <p class="p-0 m-0">subtitulo</p>
@@ -75,16 +80,18 @@
                 <div class="worldBottomLeft d-flex flex-column gap-3"> <!-- [postagens] membros do time -->
 
                     <div class="post d-flex gap-2">
-                        <img class="postImg rounded-2" src="/src/user/img/explore1.jpg" alt="">
+                        <a href="/src/user/pages/posts/"><img class="postImg rounded-2" src="/src/user/img/explore1.jpg" alt=""></a>
                         <div class="d-flex flex-column justify-content-between">
-                            <div>
-                                <h6 class="exploreName p-0">NOME LUGAR</h6>
-                                <p class="exploreSubTitle p-0 m-0">SUBTITULO</p>
-                                <p class="exploreDesc p-0 m-0 small">LOREM</p>
+                            <div class="postInfo postOK">
+                                <h6 class="exploreName p-0 m-0 fs-5 fw-bold">Minha viagem ao Japão!</h6>
+                                <p class="exploreSubTitle p-0 m-0 fst-italic small">Data da postagem: 09/10/2024</p>
+                                <p class="exploreDesc p-0 m-0 mt-1 small align text-start">Breve introdução e comentários em relação ao conteúdo do post.</p>
                             </div>
-                            <div class="postAuthor">
-                                <img class="postAuthorImg" src="/src/user/img/original/time/alice.jpg" alt="">
-                                <span>Posted by Alice</span>
+                            <div class="postInfo postAuthor postOK">
+                                <a href="/src/user/pages/posts/">
+                                    <img class="postAuthorImg" src="/src/user/img/original/time/alice.jpg" alt="">
+                                    <span>Posted by Alice</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -92,12 +99,12 @@
                     <div class="post d-flex gap-2">
                         <img class="postImg rounded-2" src="/src/user/img/explore2.jpg" alt="">
                         <div class="d-flex flex-column justify-content-between">
-                            <div>
-                                <h6 class="exploreName p-0">NOME LUGAR</h6>
-                                <p class="exploreSubTitle p-0 m-0">SUBTITULO</p>
-                                <p class="exploreDesc p-0 m-0 small">LOREM</p>
+                            <div class="postInfo">
+                                <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                                <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
+                                <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
                             </div>
-                            <div class="postAuthor">
+                            <div class="postInfo postAuthor">
                                 <img class="postAuthorImg" src="/src/user/img/original/time/elizabeth.jpg" alt="">
                                 <span>Posted by Elizabeth</span>
                             </div>
@@ -107,12 +114,12 @@
                     <div class="post d-flex gap-2">
                         <img class="postImg rounded-2" src="/src/user/img/explore3.jpg" alt="">
                         <div class="d-flex flex-column justify-content-between">
-                            <div>
-                                <h6 class="exploreName p-0">NOME LUGAR</h6>
-                                <p class="exploreSubTitle p-0 m-0">SUBTITULO</p>
-                                <p class="exploreDesc p-0 m-0 small">LOREM</p>
+                            <div class="postInfo">
+                                <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                                <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
+                                <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
                             </div>
-                            <div class="postAuthor">
+                            <div class="postInfo postAuthor">
                                 <img class="postAuthorImg" src="/src/user/img/original/time/sergio.jpg" alt="">
                                 <span>Posted by Sergio</span>
                             </div>

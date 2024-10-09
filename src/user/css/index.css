@@ -100,11 +100,19 @@ input {
     background-color: var(--color1);
 }
 .networkTopRight img {
-    width: 100px;
+    width: 120px;
     height: 180px;
     background-color: var(--color4);
 }
 
 .divSearch {
     width: 80%;
+}
+
+
+.postInfo {
+    color: var(--colorWB4);
+}
+.postOK {
+    color: var(--color6);
 }

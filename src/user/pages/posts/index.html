@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- css bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/src/user/css/bootstrap.css">
+    <!-- css font awesome -->
+    <!-- https://fontawesome.com/v6/icons -->
+    <link rel="stylesheet" href="/src/user/css/font-awesome/all.min.css">
+    <!-- css local -->
+    <link rel="stylesheet" href="/src/user/css/all.css">
+    <link rel="stylesheet" href="/src/user/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- css fim -->
+    <link rel="shortcut icon" href="/src/user/img/logo/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa</title>
+</head>
+
+<body data-bs-theme="light" class="d-flex flex-column justify-content-between">
+    <div style="height:85px;"></div>
+    <header class="header container-flud d-flex flex-row justify-content-between align-items-center p-3 fixed-top"> 
+        <div class="d-flex flex-row  gap-3">
+            <img class="imgLogo" src="/src/user/img/logo/logo.png" alt="">
+            <p class="cArrow">Name</p>
+        </div>
+        <div class="headerNav">
+            <nav  class="headerNavUL">
+                <ul class="navbar-nav d-flex flex-row gap-3">
+                    <li class="nav-item"><a class="nav-link " aria-current="page" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/about/">Sobre a empresa</a></li>
+                    <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/blog/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/src/user/pages/team/">Nosso time</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-fluid p-0 m-0">
+        <section class="post d-flex gap-3 mx-2 justify-content-start">
+            <div class="postData d-flex flex-column justify-content-start align-items-center">
+                <div class="postHashtags mt-2 d-flex flex-wrap justify-content-around gap-3">
+                    <span class="py-1 px-2 small hashtag cHand">VIAGENS</span>
+                    <span class="py-1 px-2 small hashtag cHand">ALICE</span>
+                    <span class="py-1 px-2 small hashtag cHand">JAPÃO</span>
+                </div>
+                <h3 id="postTitle" class="postTitle m-0 p-0 mt-2 mb-3">Minha viagem ao Japão!</h3>
+                <img class="postImage rounded-2" src="/src/user/img/cortado/natureza4.png" alt="">
+                <p id="postDesc" class="memberTitle fw-bold">Breve introdução e comentários em relação ao conteúdo do post.</p>
+                <div>
+                    <p class="postContent p-2 text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quibusdam! Iusto, odit in quo similique ex porro voluptatibus qui unde animi voluptates explicabo id mollitia ab ea expedita eos consequatur!</p>
+                    <p class="postContent p-2 text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quibusdam! Iusto, odit in quo similique ex porro voluptatibus qui unde animi voluptates explicabo id mollitia ab ea expedita eos consequatur!</p>
+                    <p class="postContent p-2 text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quibusdam! Iusto, odit in quo similique ex porro voluptatibus qui unde animi voluptates explicabo id mollitia ab ea expedita eos consequatur!</p>
+                    <p class="postContent p-2 text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quibusdam! Iusto, odit in quo similique ex porro voluptatibus qui unde animi voluptates explicabo id mollitia ab ea expedita eos consequatur!</p>
+                    <p class="postContent p-2 text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quibusdam! Iusto, odit in quo similique ex porro voluptatibus qui unde animi voluptates explicabo id mollitia ab ea expedita eos consequatur!</p>
+                </div>
+                <p id="postData" class="memberDesc small text-center">Data da postagem: 09/10/2024<p>
+            </div>
+            <div class="postAuthor d-flex flex-column justify-content-start align-items-center gap-2 me-2">
+                <h3 id="memberName" class="m-0 p-0 mt-2 memberName">SOBRE O AUTOR</h3>
+                <img class="postAuthorImg rounded-2" src="/src/user/img/original/time/alice.jpg" alt="">
+                <p class="fs-4">Olá eu sou Alice!</p>
+            </div>
+    </section>         
+    </main>
+
+    <footer class="footer container-fluid d-flex flex-column justify-content-center align-items-center">
+        <div class="footerTop ">
+            <div class="footerContatos d-flex flex-column align-items-start">
+                <h5 class="m-0 p-0 mt-4 fw-bold">Contatos</h5>
+                <p class="m-0 p-0">Telefone: 999999</p>
+                <p class="m-0 p-0">E-mail: senai@gmail.com</p>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p class="copyright p-0">Direitos reservados. <span class="author">SENAI</span> 2024</p>
+        </div>
+    </footer>
+</body>
+<!-- js bootrap -->
+<script type="javascript" src="/src/user/js/bootstrap.bundle.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+<!-- js jQuery -->
+<script type="javascript" src="/src/user/js/jquery-3.7.1.min.js"></script>
+<!-- js local -->
+<!-- <script type="javascript" src="/src/sevices/data/objectModel.js"></script>
+<script type="javascript" src="/src/sevices/settings.js"></script>
+<script type="javascript" src="/src/sevices/gateway/user.js"></script>
+<script type="javascript" src="js/index.js"></script> -->
+
+</html>
