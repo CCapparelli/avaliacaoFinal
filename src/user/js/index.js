@@ -26,7 +26,7 @@ window.addEventListener('load', function() {
     // Your code here
 });
 
-var currentTheme = () => localStorage.getItem("theme");
+var currentTheme = () => localStorage.getItem('theme');
     
 
 $(window).ready(function() {
@@ -37,13 +37,13 @@ $(window).ready(function() {
             btnToggleTheme.removeAttribute('checked');
         }
     } else {
-       localStorage.setItem("theme", body.getAttribute('data-bs-theme'));
+       localStorage.setItem('theme', body.getAttribute('data-bs-theme'));
     }
 });
 
 // behavior
 
-function toggleTheme(){
+function toggleTheme() {
     if(localStorage.getItem("theme") == 'dark'){
         body.setAttribute('data-bs-theme','light');
         btnToggleTheme.setAttribute('checked', '');
@@ -67,4 +67,73 @@ function applyTheme() {
         network.css('backgroundColor', 'silver');
     }
 }
+
+class PostsBinding { 
+    constructor(element, posts) {
+        this.element = element;
+        this.posts = posts;
+    }
+
+    update() {
+        this.element.innerHTML = '';
+        for (const post of this.posts) {
+            this.element.innnerHTML += `
+<div class="post d-flex gap-2">
+    <a href="/src/user/pages/posts/"><img class="postImg rounded-2" src="${post.imagem}" alt=""></a>
+    <div class="d-flex flex-column justify-content-between">
+        <div class="postInfo postOK">
+            <a href="/src/user/pages/posts/">
+                <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">${post.author.name}</h6>
+                <p class="postDate p-0 m-0 fst-italic small">Data da postagem: ${post.dataPublicacao}</p>
+                <p class="postSummary p-0 m-0 mt-1 small align text-start">${post.sumario}</p>
+            </a> 
+        </div>
+        <div class="postInfo postAuthor postOK">
+            <a href="/src/user/pages/posts/">
+                <img class="postAuthorImg" src="${post.author.fotoPath}" alt="">
+                <span>Posted by ${post.author.name}</span>
+            </a>
+        </div>
+    </div>
+</div>            
+            `;
+        }
+    }
+}
+
+localStorage.removeItem('fakeTeam');
+assureFakeData();
+var fakeTeam  = Team.deserialize(localStorage.getItem('fakeTeam'));
+var fakePosts = Posts.deserialize(localStorage.getItem('fakePosts'));
+
+var div = document.getElementById('posts');
+
+// var postBind = new PostsBinding(div, fakePosts);
+// postBind.update();
+
+// div.innerHTML = '';
+// fakePosts.forEach(post => {
+//     div.innnerHTML += `
+// <div class="post d-flex gap-2">
+//     <a href="/src/user/pages/posts/"><img class="postImg rounded-2" src="${post.imagem}" alt=""></a>
+//     <div class="d-flex flex-column justify-content-between">
+//         <div class="postInfo postOK">
+//             <a href="/src/user/pages/posts/">
+//                 <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">${post.author.name}</h6>
+//                 <p class="postDate p-0 m-0 fst-italic small">Data da postagem: ${post.dataPublicacao}</p>
+//                 <p class="postSummary p-0 m-0 mt-1 small align text-start">${post.sumario}</p>
+//             </a> 
+//         </div>
+//         <div class="postInfo postAuthor postOK">
+//             <a href="/src/user/pages/posts/">
+//                 <img class="postAuthorImg" src="${post.author.fotoPath}" alt="">
+//                 <span>Posted by ${post.author.name}</span>
+//             </a>
+//         </div>
+//     </div>
+// </div>            
+//     `;
+// });
+
+
 

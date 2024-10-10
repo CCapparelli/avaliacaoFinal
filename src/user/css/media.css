@@ -11,19 +11,61 @@
     
     0   watch   320px   mobile   480px   tablet   1024px   laptop   1440px   desktop   2560px   tv  ...
                 ---              ===              ----              ====               ----  
-                    400                   800
+                    -->     400        800     <--
 */
 
 
+/* 320 < mobile < 400*/
+@media screen and (min-width: 320px) and (max-width: 400px) and (orientation: portrait) {
+    .headerPC {
+        display: none;
+    }
+    .headerMobile {
+        display: flex;
+    }
+    .worldContent {
+        flex-direction: column;
+        align-items: center;
+    }
+    .world {
+        height: 380px;
+    }
+    .postsView {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .postsSearch {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .networkInfo {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
 
-
-/* watch - defaults to ??? */
-@media screen and (max-width: 320px) {
-
+    }
+    .networkImages {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}	
+/* 320 < mobile < 400 - landscape */
+@media screen and (min-width: 320px) and (max-width: 400px) and (orientation: landscape) {
+    body {
+        background-color: lime; 
+    }
 }	
 
-/* mobile - defaults to portrait */
-@media screen and (min-width: 320px) and (max-width: 800px) and (orientation: portrait) {
+
+/* 400 < tablet < 800 */
+@media screen and (min-width: 400px) and (max-width: 800px) and (orientation: portrait) {
+    .headerPC {
+        display: none;
+    }
+    .headerMobile {
+        display: flex;
+    }
     .worldContent {
         flex-direction: column;
         align-items: center;
@@ -42,15 +84,19 @@
     .networkInfo {
         flex-direction: column;
         align-items: center;
-
-    }
-    .networkImages {
-        width: 100%;
     }
 }	
-/* mobile - landscape */
-@media screen and (min-width: 320px) and (max-width: 800px) and (orientation: landscape) {
+/* 400 < tablet < 800 - landscape */
+@media screen and (min-width: 400px) and (max-width: 800px) and (orientation: landscape) {
     body {
-        background-color: lime;
+        background-color: pink; 
     }
 }	
+
+
+/* watch < 320 */
+@media screen and (max-width: 320px) {
+
+}	
+
+
