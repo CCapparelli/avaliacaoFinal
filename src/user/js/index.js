@@ -56,14 +56,14 @@ function toggleTheme(){
 }
 
 var network = $('#network');
-var worldTop = $('#worldTop');
+var world = $('#world');
 
 function applyTheme() {
     if (currentTheme() === 'dark') {
-        worldTop.css('backgroundColor', 'rgb(80,80,80)');
+        world.css('backgroundColor', 'rgb(80,80,80)');
         network.css('backgroundColor', 'rgb(80,80,80)');
     } else {
-        worldTop.css('backgroundColor', 'silver');
+        world.css('backgroundColor', 'silver');
         network.css('backgroundColor', 'silver');
     }
 }

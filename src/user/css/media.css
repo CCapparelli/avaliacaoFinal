@@ -1,5 +1,6 @@
 /* css media configuration related to index.html 
 
+                width ?     portrait or landscape 
     MobileS		320
     MobileM		375
     MobileL		425         *   480
@@ -8,9 +9,13 @@
     LaptopL		1440        *
     4K			2560 	
     
-    watch   320px   mobile   480px   tablet   1024px   laptop   1440px   desktop   2560px   tv
-            ---              ===              ----              ====               ----  
+    0   watch   320px   mobile   480px   tablet   1024px   laptop   1440px   desktop   2560px   tv  ...
+                ---              ===              ----              ====               ----  
+                    400                   800
 */
+
+
+
 
 /* watch - defaults to ??? */
 @media screen and (max-width: 320px) {
@@ -18,56 +23,34 @@
 }	
 
 /* mobile - defaults to portrait */
-@media screen and (max-width: 480px) and (orientation: portrait) {
-    #btnMenu, aside {
-        display: none;
+@media screen and (min-width: 320px) and (max-width: 800px) and (orientation: portrait) {
+    .worldContent {
+        flex-direction: column;
+        align-items: center;
     }
-    footer nav {
-        display: flex;
+    .world {
+        height: 380px;
+    }
+    .postsView {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .postsSearch {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .networkInfo {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .networkImages {
+        width: 100%;
     }
 }	
 /* mobile - landscape */
-@media screen and (max-height: 480px) and (orientation: landscape) {
-    #btnMenu, aside {
-        display: flex;
-    }
-    footer nav {
-        display: none;
+@media screen and (min-width: 320px) and (max-width: 800px) and (orientation: landscape) {
+    body {
+        background-color: lime;
     }
 }	
-
-/* tablet - defaults to ??? */
-@media screen and (min-width: 480px) and (max-width: 1024px) and (orientation: portrait) {
-
-}	
-/* tablet - landscape */
-@media screen and (min-height: 480px) and (max-height: 1024px) and (orientation: landscape) {
-
-}	
-
-/* laptop - defaults to landscape */
-@media screen and (min-width: 1024px) and (max-width: 1440px) and (orientation: portrait) {
-
-}	
-/* laptop - landscape */
-@media screen and (min-height: 1024px) and (max-height: 1440px) and (orientation: landscape) {
-
-}	
-
-/* desktop - defaults to landscape */
-@media screen and (min-width: 1440px) and (max-width: 2560px) and (orientation: portrait) {
-
-}	
-/* desktop - landscape */
-@media screen and (min-height: 1440px) and (max-height: 2560px) and (orientation: landscape) {
-
-}	
-
-/* tv - portrait ??? */
-@media screen and (max-width: 2560px) and (orientation: portrait) {
-
-}	
-/* tv - landscape ! */
-@media screen and (max-height: 2560px) and (orientation: landscape) {
-
-}

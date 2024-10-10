@@ -1,9 +1,3 @@
-$(window).ready(function() {
-    alert(`
-Este alerta, apresentado apenas quando essa página é carregada, 
-satisfaz um dos requerimentos propostos no enunciado da avaliação.`);
-});
-
 var aboutUs = $('#aboutUs');
 
 function applyTheme() {

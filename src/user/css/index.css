@@ -63,24 +63,33 @@ input {
     width: 180px;
     height: 180px;
     border-radius: 100%;
-    background-color: var(--color4);
 }
 .world {
-}
-.worldTop {
     background-color: silver;
+    height: 270px;
 }
 .worldTopLeft {
     width: 50%;
 }
-.worldTopRight {
+.worldImages {
     width: 50%;
     height: 200px;
     border-radius: 20px;
-    background-color: var(--color4);
-    background-image: url(/src//user/img/exploreMundo.jpg);
+    /* background-color: var(--color4); */
+    /* background-image: url(/src//user/img/exploreMundo.jpg); */
     background-size: cover;
 }
+.carousel {
+    width: 400px;
+    height: 200px;
+    margin: 0;
+}
+.carousel-item {
+    width: 400px;
+    height: 200px;
+    border-radius: var(--spaceIn);;
+}
+
 
 .posts {
     width: 50%;
@@ -105,10 +114,9 @@ input {
 .network {
     background-color: silver;
 }
-.networkTopRight img {
+.networkImage {
     width: 120px;
     height: 180px;
-    background-color: var(--color4);
 }
 
 

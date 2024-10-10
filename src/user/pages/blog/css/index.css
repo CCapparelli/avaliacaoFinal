@@ -1,10 +1,12 @@
 .carousel {
-    height: 350px;
+    width: 100%;
+    height: 500px;
     margin: 0px var(--spaceOut);
     margin-top: var(--spaceIn2);
 }
 .carousel-item {
-    height: 350px;
+    width: 100%;
+    height: 500px;
 }
 .posts {
     background-color: silver;

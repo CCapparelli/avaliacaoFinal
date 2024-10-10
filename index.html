@@ -56,117 +56,131 @@
     <main class="container-fluid p-0 m-0 d-flex flex-column justify-content-start">
         <section class="banner d-flex justify-content-between p-3">
             <div class="bannerkLeft">
-                <h4 class="p-0">Titulo do Website</h4>
-                <p class="p-0 m-0">Subtitulo do Website</p>
-                <p class="p-0 m-0 small">Descrição</p>
+                <h4 class="p-0 m-0 fw-bold">Titulo do Website</h4>
+                <p class="p-0 m-0 small">Subtitulo do Website</p>
+                <p class="p-0 m-0 mt-2">Descrição</p>
             </div>
             <div class="bannerkRight">
                 <img class="bannerImg" src="/src/user/img/original/time/sergio.jpg" alt="">
             </div>
         </section>
 
-        <section class="world d-flex flex-column ">
-            <div id="worldTop" class="worldTop w-100 p-3 d-flex flex-column">
-                <h4 class="align-self-center p-0 mt-0">EXPLORE O MUNDO!</h4>
-                <div class="worldTopContent d-flex justify-content-between">
-                    <div class="worldTopLeft">
-                        <p class="p-0 m-0">Subtitulo</p>
-                        <p class="p-0 m-0 small">Descrição</p>
+        <section id="world" class="world w-100 p-3 d-flex flex-column">
+            <h4 class="align-self-center p-0 mt-0">EXPLORE O MUNDO!</h4>
+            <div id="worldContent" class="worldContent d-flex justify-content-between gap-3">
+                <div class="worldInfo">
+                    <p class="p-0 m-0 fw-bold">Subtitulo</p>
+                    <p class="p-0 m-0 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sapiente sint adipisci eveniet dignissimos exercitationem hic alias cupiditate velit, aspernatur laborum corporis minus sunt dolor ad impedit deleniti ab tempora.</p>
+                </div>
+                <div id="worldImages" class="worldImages d-flex justify-content-center">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/src/user/img/cortado/natureza1.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/src/user/img/cortado/natureza2.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/src/user/img/cortado/natureza3.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
                     </div>
-                    <div class="worldTopRight"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="postsView w-100 p-3 d-flex justify-content-start mt-3 gap-3">
+            <div class="posts w-100 d-flex flex-column gap-3"> 
+                <div class="post d-flex gap-2">
+                    <a href="/src/user/pages/posts/"><img class="postImg rounded-2" src="/src/user/img/explore1.jpg" alt=""></a>
+                    <div class="d-flex flex-column justify-content-between">
+                        <div class="postInfo postOK">
+                            <a href="/src/user/pages/posts/">
+                                <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">Minha viagem ao Japão!</h6>
+                                <p class="postDate p-0 m-0 fst-italic small">Data da postagem: 09/10/2024</p>
+                                <p class="postSummary p-0 m-0 mt-1 small align text-start">Breve introdução e comentários em relação ao conteúdo do post.</p>
+                            </a> 
+                        </div>
+                        <div class="postInfo postAuthor postOK">
+                            <a href="/src/user/pages/posts/">
+                                <img class="postAuthorImg" src="/src/user/img/original/time/alice.jpg" alt="">
+                                <span>Posted by Alice</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post d-flex gap-2">
+                    <img class="postImg rounded-2" src="/src/user/img/explore2.jpg" alt="">
+                    <div class="d-flex flex-column justify-content-between">
+                        <div class="postInfo">
+                            <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                            <p class="postDate p-0 m-0 fst-italic small">SUBTITULO</p>
+                            <p class="postSummary p-0 m-0 mt-1 small align text-start">LOREM</p>
+                        </div>
+                        <div class="postInfo postAuthor">
+                            <img class="postAuthorImg" src="/src/user/img/original/time/elizabeth.jpg" alt="">
+                            <span>Posted by Elizabeth</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post d-flex gap-2">
+                    <img class="postImg rounded-2" src="/src/user/img/explore3.jpg" alt="">
+                    <div class="d-flex flex-column justify-content-between">
+                        <div class="postInfo">
+                            <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                            <p class="postDate p-0 m-0 fst-italic small">SUBTITULO</p>
+                            <p class="postSummary p-0 m-0 mt-1 small align text-start">LOREM</p>
+                        </div>
+                        <div class="postInfo postAuthor">
+                            <img class="postAuthorImg" src="/src/user/img/original/time/sergio.jpg" alt="">
+                            <span>Posted by Sergio</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="postsView w-100 p-3 d-flex justify-content-start mt-3 gap-3">
-                <div class="posts d-flex flex-column gap-3"> 
-                    <div class="post d-flex gap-2">
-                        <a href="/src/user/pages/posts/"><img class="postImg rounded-2" src="/src/user/img/explore1.jpg" alt=""></a>
-                        <div class="d-flex flex-column justify-content-between">
-                            <div class="postInfo postOK">
-                                <a href="/src/user/pages/posts/">
-                                    <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">Minha viagem ao Japão!</h6>
-                                    <p class="postDate p-0 m-0 fst-italic small">Data da postagem: 09/10/2024</p>
-                                    <p class="postSummary p-0 m-0 mt-1 small align text-start">Breve introdução e comentários em relação ao conteúdo do post.</p>
-                                </a> 
-                            </div>
-                            <div class="postInfo postAuthor postOK">
-                                <a href="/src/user/pages/posts/">
-                                    <img class="postAuthorImg" src="/src/user/img/original/time/alice.jpg" alt="">
-                                    <span>Posted by Alice</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="post d-flex gap-2">
-                        <img class="postImg rounded-2" src="/src/user/img/explore2.jpg" alt="">
-                        <div class="d-flex flex-column justify-content-between">
-                            <div class="postInfo">
-                                <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
-                                <p class="postDate p-0 m-0 fst-italic small">SUBTITULO</p>
-                                <p class="postSummary p-0 m-0 mt-1 small align text-start">LOREM</p>
-                            </div>
-                            <div class="postInfo postAuthor">
-                                <img class="postAuthorImg" src="/src/user/img/original/time/elizabeth.jpg" alt="">
-                                <span>Posted by Elizabeth</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="post d-flex gap-2">
-                        <img class="postImg rounded-2" src="/src/user/img/explore3.jpg" alt="">
-                        <div class="d-flex flex-column justify-content-between">
-                            <div class="postInfo">
-                                <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
-                                <p class="postDate p-0 m-0 fst-italic small">SUBTITULO</p>
-                                <p class="postSummary p-0 m-0 mt-1 small align text-start">LOREM</p>
-                            </div>
-                            <div class="postInfo postAuthor">
-                                <img class="postAuthorImg" src="/src/user/img/original/time/sergio.jpg" alt="">
-                                <span>Posted by Sergio</span>
-                            </div>
-                        </div>
+            <div class="postsSearch w-50 d-flex flex-column justify-content-start gap-2">
+                <div class="d-flex justify-content-around align-items-center">
+                    <div class="w-100 postsSearchTrigger input-group">
+                        <input id="txtSearch" class="txtSearch form-control py-2" type="search" value="search">
+                        <span class="input-group-append">
+                            <button class="btn" type="button"><i class="fa fa-search"></i></button>
+                        </span>
                     </div>
                 </div>
-
-                <div class="postsSearch w-50 d-flex flex-column justify-content-start gap-2">
-                    <div class=" d-flex justify-content-around align-items-center">
-                        <div class="postsSearchTrigger input-group">
-                            <input id="txtSearch" class="txtSearch form-control py-2" type="search" value="search">
-                            <span class="input-group-append">
-                                <button class="btn" type="button"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </div>
-                    <select id="cmbSearchRecentes" name="cmbSearchRecentes" class="form-select">
-                    <option value="">Posts recentes</option>
-                    </select>
-                    <select id="cmbSearchTemas" name="cmbSearchTemas" class="form-select">
-                        <option selected>Temas do Blog</option>
-                    </select>
-                    <select id="cmbSearchGaleria" name="cmbSearchGaleria" class="form-select">
-                        <option value="">Galeria</option>
-                    </select>
-                    <select id="cmbSearchCategoria" name="cmbSearchCategoria" class="form-select">
-                        <option value="">Categorias</option>
-                    </select>
-                    <select id="cmbSearchBlogSergio" name="cmbSearchBlogSergio" class="form-select">
-                        <option value="">Blog do Sergio</option>
-                    </select>
-                </div>
+                <select id="cmbSearchRecentes" name="cmbSearchRecentes" class="form-select">
+                <option value="">Posts recentes</option>
+                </select>
+                <select id="cmbSearchTemas" name="cmbSearchTemas" class="form-select">
+                    <option selected>Temas do Blog</option>
+                </select>
+                <select id="cmbSearchGaleria" name="cmbSearchGaleria" class="form-select">
+                    <option value="">Galeria</option>
+                </select>
+                <select id="cmbSearchCategoria" name="cmbSearchCategoria" class="form-select">
+                    <option value="">Categorias</option>
+                </select>
+                <select id="cmbSearchBlogSergio" name="cmbSearchBlogSergio" class="form-select">
+                    <option value="">Blog do Sergio</option>
+                </select>
             </div>
         </section>
 
         <section id="network" class="network d-flex flex-column">
             <h4 class="align-self-center p-0 mt-3">MONTE UM NETWORKING!</h4>
-            <div class="networkTop w-100 p-3 d-flex">
-                <div class="worldTopLeft">
+            <div class="networkInfo w-100 p-3 d-flex gap-3">
+                <div class="networkContent">
                     <p class="p-0 m-0 fw-bold">Conheça novas pessoas. Compartilhe experiências!</p>
                     <p class="p-0 m-0 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt blanditiis natus saepe obcaecati possimus aliquid veritatis odit provident itaque asperiores? Deserunt, sint aut ullam commodi ducimus iste. Quia, error debitis?</p>
                 </div>
-                <div class="networkTopRight w-50 d-flex justify-content-center gap-2">
-                    <img class="img rounded-2" src="/src/user/img/network1.jpg" alt="">
-                    <img class="img rounded-2" src="/src/user/img/network2.jpg" alt="">
-                    <img class="img rounded-2" src="/src/user/img/network3.jpg" alt="">
+                <div class="networkImages w-50 d-flex justify-content-center gap-2">
+                    <img class="networkImage rounded-2" src="/src/user/img/network1.jpg" alt="">
+                    <img class="networkImage rounded-2" src="/src/user/img/network2.jpg" alt="">
+                    <img class="networkImage rounded-2" src="/src/user/img/network3.jpg" alt="">
                 </div>
             </div>
         </section>
