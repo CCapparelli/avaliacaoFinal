@@ -1,6 +1,10 @@
 
+const body              = document.querySelector("body");
+const btnToggleTheme    = document.getElementById("btnToggleTheme");
 
 // event handlers
+
+btnToggleTheme.addEventListener('click', toggleTheme);
 
 // In general, the DOMContentLoaded event is a good choice 
 // if your JavaScript code doesn’t rely on external assets, 
@@ -22,28 +26,45 @@ window.addEventListener('load', function() {
     // Your code here
 });
 
-$(document).ready(function() {
-    // Your code here
+var currentTheme = () => localStorage.getItem("theme");
+    
+
+$(window).ready(function() {
+    var theme = currentTheme();
+    if (theme) {
+        body.setAttribute('data-bs-theme', theme);
+        if (theme === 'dark') {
+            btnToggleTheme.removeAttribute('checked');
+        }
+    } else {
+       localStorage.setItem("theme", body.getAttribute('data-bs-theme'));
+    }
 });
 
 // behavior
 
-const body = document.querySelector("body");
-
-const btnToggleTheme = document.getElementById("btnToggleTheme");
-btnToggleTheme.addEventListener('click', toggleTheme);
-
-
 function toggleTheme(){
-    if(body.getAttribute('data-bs-theme') == 'dark'){
+    if(localStorage.getItem("theme") == 'dark'){
         body.setAttribute('data-bs-theme','light');
-        btnToggleTheme.innerHTML='<i class="fa fa-sun">';
-    }else{
+        btnToggleTheme.setAttribute('checked', '');
+    } else {
         body.setAttribute('data-bs-theme','dark');
-        btnToggleTheme.innerHTML='<i class="fa fa-moon">';
+        btnToggleTheme.removeAttribute('checked');
     }
+    localStorage.setItem("theme", body.getAttribute('data-bs-theme'))
+    applyTheme();
 }
 
+var network = $('#network');
+var worldTop = $('#worldTop');
 
-
+function applyTheme() {
+    if (currentTheme() === 'dark') {
+        worldTop.css('backgroundColor', 'rgb(80,80,80)');
+        network.css('backgroundColor', 'rgb(80,80,80)');
+    } else {
+        worldTop.css('backgroundColor', 'silver');
+        network.css('backgroundColor', 'silver');
+    }
+}
 

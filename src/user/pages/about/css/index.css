@@ -1,11 +1,5 @@
-.galery {
-    height: 200px;
-    background-color: var(--color1);
-    margin: 0px var(--spaceOut);
-}
-
 .aboutUs {
-    background-color: var(--color1);
+    background-color: silver;
 }
 .aboutUsLeft {
     width: 50%;
@@ -14,4 +8,13 @@
     width: 50%;
     height: 200px;
     border-radius: 20px;
+}
+
+.carousel {
+    height: 350px;
+    margin: 0px var(--spaceOut);
+    margin-bottom: var(--spaceIn2);
+}
+.carousel-item {
+    height: 350px;
 }

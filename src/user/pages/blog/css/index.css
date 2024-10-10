@@ -1,14 +1,13 @@
 .carousel {
     height: 350px;
-    background-color: var(--color1);
     margin: 0px var(--spaceOut);
     margin-top: var(--spaceIn2);
 }
 .carousel-item {
     height: 350px;
 }
-.aboutUs {
-    background-color: var(--color1);
+.posts {
+    background-color: silver;
 }
 .aboutUsLeft {
     width: 50%;
@@ -21,5 +20,5 @@
 }
 
 .post {
-    background-color: var(--colorWhitish);
+    background-color: white;
 }

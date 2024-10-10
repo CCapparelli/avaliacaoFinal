@@ -19,20 +19,30 @@
     <title>Empresa</title>
 </head>
 
-<body data-bs-theme="light" >
+<body data-bs-theme="light">
     <div style="height:85px;"></div>
-    <header class="header container-flud d-flex flex-row justify-content-between align-items-center p-3 fixed-top"> 
+    <header class="header container-flud d-flex flex-row justify-content-between align-items-center p-3 fixed-top">
         <div class="d-flex flex-row  gap-3">
             <img class="imgLogo" src="/src/user/img/logo/logo.png" alt="">
-            <p class="cArrow">Name</p>
+            <p class="cArrow">Empresa</p>
+        </div>
+        <div class="d-flex justify-content-start align-items-center gap-2">
+            <i class="fa fa-moon"></i>
+            <div class="form-check form-switch">
+                <input id="btnToggleTheme" class="form-check-input" type="checkbox" checked />
+                <i class="fa fa-sun"></i>
+            </div>
         </div>
         <div class="headerNav">
-            <nav  class="headerNavUL">
+            <nav class="headerNavUL">
                 <ul class="navbar-nav d-flex flex-row gap-3">
                     <li class="nav-item"><a class="nav-link " aria-current="page" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/src/user/pages/about/">Sobre a empresa</a></li>
-                    <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/blog/">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/team/">Nosso time</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="/src/user/pages/about/">Sobre a empresa</a></li>
+                    <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/blog/">Blog</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/team/">Nosso
+                            time</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,11 +50,13 @@
 
     <main class="container-fluid p-0 m-0 d-flex flex-column justify-content-start">
         <h4 class="p-0 align-self-center">SOBRE NÓS</h4>
-        <section class="aboutUs d-flex flex-column p-3 gap-4">
+        <section id="aboutUs" class="aboutUs d-flex flex-column p-3 gap-4">
             <div class="aboutUsItem d-flex gap-3">
                 <div class="aboutUsLeft">
                     <p class="p-0 m-0 fw-bold">Nossa missão</p>
-                    <p class="p-0 m-0 small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat tempore deserunt blanditiis pariatur velit delectus quam fuga soluta, doloribus repellat. Quisquam rem nemo, est quo maiores totam cumque sed ea!</p>
+                    <p class="p-0 m-0 small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat tempore
+                        deserunt blanditiis pariatur velit delectus quam fuga soluta, doloribus repellat. Quisquam rem
+                        nemo, est quo maiores totam cumque sed ea!</p>
                 </div>
                 <div class="aboutUsRight d-flex justify-content-around">
                     <img class="aboutUsImg rounded-4" src="/src/user/img/sobreMissão.jpg" alt="">
@@ -53,7 +65,9 @@
             <div class="aboutUsItem d-flex flex-row-reverse gap-3">
                 <div class="aboutUsLeft">
                     <p class="p-0 m-0 fw-bold">Como ajudaremos?</p>
-                    <p class="p-0 m-0 small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi eaque delectus fugit dicta, unde nulla ab eveniet libero illum, nemo quaerat repudiandae voluptas est laudantium iusto illo asperiores cumque molestiae!</p>
+                    <p class="p-0 m-0 small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi eaque
+                        delectus fugit dicta, unde nulla ab eveniet libero illum, nemo quaerat repudiandae voluptas est
+                        laudantium iusto illo asperiores cumque molestiae!</p>
                 </div>
                 <div class="aboutUsRight d-flex justify-content-around">
                     <img class="aboutUsImg rounded-4" src="/src/user/img/sobreComo.png" alt="">
@@ -62,19 +76,67 @@
             <div class="aboutUsItem d-flex gap-3">
                 <div class="aboutUsLeft">
                     <p class="p-0 m-0 fw-bold">Natureza e sustentabilidade</p>
-                    <p class="p-0 m-0 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus, quidem tempore recusandae, consequatur laborum et ipsum assumenda quibusdam delectus minima aliquid eos sit atque, earum debitis eligendi nulla? Similique!</p>
+                    <p class="p-0 m-0 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus,
+                        quidem tempore recusandae, consequatur laborum et ipsum assumenda quibusdam delectus minima
+                        aliquid eos sit atque, earum debitis eligendi nulla? Similique!</p>
                 </div>
                 <div class="aboutUsRight d-flex justify-content-around">
                     <img class="aboutUsImg rounded-4" src="/src/user/img/sobreSustentabilidade.jpg" alt="">
                 </div>
             </div>
         </section>
-        
+
         <h4 class="p-0 align-self-center">GALERIA</h4>
-        <section class="galery mt-0 mb-3">
-            <!-- <img class="imgGalery" src="/src/user/img/logo/..." alt=""> -->
+        <section id="carousel" class="carousel">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/src/user/img/cortado/natureza1.png" class="img d-block w-100" alt="img 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="m-0">First slide label</h5>
+                            <p class="text-center">Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/src/user/img/cortado/natureza2.png" class="img d-block w-100" alt="img 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="m-0">Second slide label</h5>
+                            <p class="text-center">Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/src/user/img/cortado/natureza3.png" class="img d-block w-100" alt="img 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="m-0">Third slide label</h5>
+                            <p class="text-center">Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/src/user/img/cortado/natureza4.png" class="img d-block w-100" alt="img 4">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="m-0">Fourth slide label</h5>
+                            <p class="text-center">Some representative placeholder content for the fourth slide.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
         </section>
-                
+
     </main>
 
     <footer class="footer d-flex flex-column justify-content-center align-items-center">
@@ -90,15 +152,16 @@
         </div>
     </footer>
 </body>
-<!-- js bootrap -->
-<script type="javascript" src="/src/user/js/bootstrap.bundle.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
 <!-- js jQuery -->
-<script type="javascript" src="/src/user/js/jquery-3.7.1.min.js"></script>
+<script src="/src/user/js/jquery-3.7.1.min.js"></script>
+<!-- js bootrap -->
+<script src="/src/user/js/bootstrap.bundle.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
 <!-- js local -->
-<!-- <script type="javascript" src="/src/sevices/data/objectModel.js"></script>
-<script type="javascript" src="/src/sevices/settings.js"></script>
-<script type="javascript" src="/src/sevices/gateway/user.js"></script>
-<script type="javascript" src="js/index.js"></script> -->
+<!-- <script src="/src/sevices/data/objectModel.js"></script> -->
+<!-- <script src="/src/sevices/settings.js"></script> -->
+<!-- <script src="/src/sevices/gateway/user.js"></script> -->
+<script src="/src/user/js/index.js"></script>
+<script src="js/index.js"></script>
 
 </html>

@@ -29,6 +29,9 @@ a {
     color: inherit;
 }
 a:hover {
+    font-weight: bold;
+}
+.active {
     text-decoration: underline;
 }
 
@@ -65,10 +68,7 @@ input {
 .world {
 }
 .worldTop {
-    background-color: var(--color1)
-}
-.worldTopImg {
-
+    background-color: silver;
 }
 .worldTopLeft {
     width: 50%;
@@ -81,25 +81,29 @@ input {
     background-image: url(/src//user/img/exploreMundo.jpg);
     background-size: cover;
 }
-.worldBottom {
-}
-.worldBottomLeft {
+
+.posts {
     width: 50%;
-    height: 500px;
+    height: 400px;
     overflow-y: scroll;
 }
-.worldBottomRight {
-    width: 50%;
-    border-radius: 20px;
+.postInfo {
+    color: var(--colorWB4);
+}
+.postOK {
+    color: var(--color6);
 }
 .postImg {
     width: 150px;
     height: 150px;
     background-color: var(--color4);
 }
+.postsSearchTrigger {
+    width: 80%;
+}
 
 .network {
-    background-color: var(--color1);
+    background-color: silver;
 }
 .networkTopRight img {
     width: 120px;
@@ -107,15 +111,5 @@ input {
     background-color: var(--color4);
 }
 
-.divSearch {
-    width: 80%;
-}
 
-
-.postInfo {
-    color: var(--colorWB4);
-}
-.postOK {
-    color: var(--color6);
-}
 

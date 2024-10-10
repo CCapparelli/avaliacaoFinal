@@ -32,7 +32,14 @@
     <header class="header container-flud d-flex flex-row justify-content-between align-items-center p-3 fixed-top"> 
         <div class="d-flex flex-row  gap-3">
             <img class="imgLogo" src="/src/user/img/logo/logo.png" alt="">
-            <p class="cArrow">Name</p>
+            <p class="cArrow">Empresa</p>
+        </div>
+        <div class="d-flex justify-content-start align-items-center gap-2">
+            <i class="fa fa-moon"></i>
+                <div class="form-check form-switch">
+                <input id="btnToggleTheme" class="form-check-input" type="checkbox" checked />
+                <i class="fa fa-sun"></i>
+            </div>
         </div>
         <div class="headerNav">
             <nav  class="headerNavUL">
@@ -41,17 +48,12 @@
                     <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/about/">Sobre a empresa</a></li>
                     <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/blog/">Blog</a></li>
                     <li class="nav-item"><a class="nav-link " aria-current="page" href="/src/user/pages/team/">Nosso time</a></li>
-                    <button id="btnToggleTheme" class="btn" type="btn"><i class="fa fa-moon"></i></button>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container-fluid p-0 m-0 d-flex flex-column justify-content-start">
-
-
-
-
         <section class="banner d-flex justify-content-between p-3">
             <div class="bannerkLeft">
                 <h4 class="p-0">Titulo do Website</h4>
@@ -64,27 +66,27 @@
         </section>
 
         <section class="world d-flex flex-column ">
-            <div class="worldTop w-100 p-3 d-flex flex-column">
+            <div id="worldTop" class="worldTop w-100 p-3 d-flex flex-column">
                 <h4 class="align-self-center p-0 mt-0">EXPLORE O MUNDO!</h4>
                 <div class="worldTopContent d-flex justify-content-between">
                     <div class="worldTopLeft">
-                        <p class="p-0 m-0">subtitulo</p>
-                        <p class="p-0 m-0 small">Descricao</p>
+                        <p class="p-0 m-0">Subtitulo</p>
+                        <p class="p-0 m-0 small">Descrição</p>
                     </div>
-                    <div class="worldTopRight w-50">
-                        <!-- <img class="worldTopImg" src="/src/user/img/exploreMundo.jpg" alt=""> -->
-                    </div>
+                    <div class="worldTopRight"></div>
                 </div>
             </div>
-            <div class="worldBottom w-100 p-3 d-flex justify-content-start mt-3">
-                <div class="worldBottomLeft d-flex flex-column gap-3"> <!-- [postagens] membros do time -->
+            <div class="postsView w-100 p-3 d-flex justify-content-start mt-3 gap-3">
+                <div class="posts d-flex flex-column gap-3"> 
                     <div class="post d-flex gap-2">
                         <a href="/src/user/pages/posts/"><img class="postImg rounded-2" src="/src/user/img/explore1.jpg" alt=""></a>
                         <div class="d-flex flex-column justify-content-between">
                             <div class="postInfo postOK">
-                                <h6 class="exploreName p-0 m-0 fs-5 fw-bold">Minha viagem ao Japão!</h6>
-                                <p class="exploreSubTitle p-0 m-0 fst-italic small">Data da postagem: 09/10/2024</p>
-                                <p class="exploreDesc p-0 m-0 mt-1 small align text-start">Breve introdução e comentários em relação ao conteúdo do post.</p>
+                                <a href="/src/user/pages/posts/">
+                                    <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">Minha viagem ao Japão!</h6>
+                                    <p class="postDate p-0 m-0 fst-italic small">Data da postagem: 09/10/2024</p>
+                                    <p class="postSummary p-0 m-0 mt-1 small align text-start">Breve introdução e comentários em relação ao conteúdo do post.</p>
+                                </a> 
                             </div>
                             <div class="postInfo postAuthor postOK">
                                 <a href="/src/user/pages/posts/">
@@ -99,9 +101,9 @@
                         <img class="postImg rounded-2" src="/src/user/img/explore2.jpg" alt="">
                         <div class="d-flex flex-column justify-content-between">
                             <div class="postInfo">
-                                <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
-                                <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
-                                <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
+                                <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                                <p class="postDate p-0 m-0 fst-italic small">SUBTITULO</p>
+                                <p class="postSummary p-0 m-0 mt-1 small align text-start">LOREM</p>
                             </div>
                             <div class="postInfo postAuthor">
                                 <img class="postAuthorImg" src="/src/user/img/original/time/elizabeth.jpg" alt="">
@@ -114,9 +116,9 @@
                         <img class="postImg rounded-2" src="/src/user/img/explore3.jpg" alt="">
                         <div class="d-flex flex-column justify-content-between">
                             <div class="postInfo">
-                                <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
-                                <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
-                                <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
+                                <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
+                                <p class="postDate p-0 m-0 fst-italic small">SUBTITULO</p>
+                                <p class="postSummary p-0 m-0 mt-1 small align text-start">LOREM</p>
                             </div>
                             <div class="postInfo postAuthor">
                                 <img class="postAuthorImg" src="/src/user/img/original/time/sergio.jpg" alt="">
@@ -126,39 +128,39 @@
                     </div>
                 </div>
 
-                <div class="worldBottomRight w-50 d-flex flex-column justify-content-start gap-2">
+                <div class="postsSearch w-50 d-flex flex-column justify-content-start gap-2">
                     <div class=" d-flex justify-content-around align-items-center">
-                        <div class="divSearch input-group">
+                        <div class="postsSearchTrigger input-group">
                             <input id="txtSearch" class="txtSearch form-control py-2" type="search" value="search">
                             <span class="input-group-append">
                                 <button class="btn" type="button"><i class="fa fa-search"></i></button>
                             </span>
                         </div>
                     </div>
-                    <select id="cmbRecentes" name="cmbRecentes" class="form-select">
+                    <select id="cmbSearchRecentes" name="cmbSearchRecentes" class="form-select">
                     <option value="">Posts recentes</option>
                     </select>
-                    <select id="cmbTemas" name="cmbTemas" class="form-select">
+                    <select id="cmbSearchTemas" name="cmbSearchTemas" class="form-select">
                         <option selected>Temas do Blog</option>
                     </select>
-                    <select id="cmbGaleria" name="cmbGaleria" class="form-select">
+                    <select id="cmbSearchGaleria" name="cmbSearchGaleria" class="form-select">
                         <option value="">Galeria</option>
                     </select>
-                    <select id="cmbCategoria" name="cmbCategoria" class="form-select">
+                    <select id="cmbSearchCategoria" name="cmbSearchCategoria" class="form-select">
                         <option value="">Categorias</option>
                     </select>
-                    <select id="cmbBlogSergio" name="cmbBlogSergio" class="form-select">
+                    <select id="cmbSearchBlogSergio" name="cmbSearchBlogSergio" class="form-select">
                         <option value="">Blog do Sergio</option>
                     </select>
                 </div>
             </div>
         </section>
 
-        <section class="network d-flex flex-column">
+        <section id="network" class="network d-flex flex-column">
             <h4 class="align-self-center p-0 mt-3">MONTE UM NETWORKING!</h4>
             <div class="networkTop w-100 p-3 d-flex">
                 <div class="worldTopLeft">
-                    <p class="p-0 m-0 fw-bold">conheça novas pessoas compartilhe experiências</p>
+                    <p class="p-0 m-0 fw-bold">Conheça novas pessoas. Compartilhe experiências!</p>
                     <p class="p-0 m-0 small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt blanditiis natus saepe obcaecati possimus aliquid veritatis odit provident itaque asperiores? Deserunt, sint aut ullam commodi ducimus iste. Quia, error debitis?</p>
                 </div>
                 <div class="networkTopRight w-50 d-flex justify-content-center gap-2">
@@ -184,14 +186,14 @@
     </footer>
 
 </body>
-<!-- js bootrap -->
-<script type="javascript" src="/src/user/js/bootstrap.bundle.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
 <!-- js jQuery -->
-<script type="javascript" src="/src/user/js/jquery-3.7.1.min.js"></script>
+<script src="/src/user/js/jquery-3.7.1.min.js"></script>
+<!-- js bootrap -->
+<script src="/src/user/js/bootstrap.bundle.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
 <!-- js local -->
-<!-- <script type="javascript" src="/src/sevices/data/objectModel.js"></script>
-<script type="javascript" src="/src/sevices/data/data.js"></script>
-<script type="javascript" src="/src/sevices/settings.js"></script> -->
-<script type="javascript" src="/src/user/js/index.js"></script>
+<!-- <script src="/src/sevices/data/objectModel.js"></script> -->
+<!-- <script src="/src/sevices/settings.js"></script> -->
+<!-- <script src="/src/sevices/gateway/user.js"></script> -->
+<script src="/src/user/js/index.js"></script>
 </html>

@@ -117,115 +117,9 @@ body, header, footer {
     width: 100%;
 }
 
-body {
-    /* color: var(--colorBlackish);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; */
-    background-color: var(--colorWhitish);
-    animation: bgColor 3s;
-}
-
-/* 
-header, footer, aside {
-    width: 100%;
-    background-color: var(--color4); 
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    z-index: 99999;
-}
-header {
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-}
-header i, header img {
-    margin: var(--spaceIn);
-    padding: var(--spaceIn);
-    font-size: 18pt;
-    cursor: pointer;
-    color:var(--color6);
-}
-header i:hover {
-    color: var(--color4);;
-    border-radius: var(--spaceIn);
-
-    background-color: var(--colorWhitish);
-    transition: var(--transition);
-}
-header i:active {
-    color: var(--color7);
-}
-header input {
-    width: 100%;
-    padding: var(--spaceMin) var(--spaceIn2);
-    border: none;
-    border-radius: var(--spaceOut);
-    font-size: var(--textSize);
-    transition: var(--transition);
-}
-header input:hover, header input:focus {
-    font-size: 12pt;
-    padding: var(--spaceIn) var(--spaceIn2);
-    border: 1px solid var(--color7);
-    outline-style: none;
-    background-color: var(--colorWhite);
-    transition: var(--transition);
-}
-
-header nav, footer nav {
-    justify-content: center;
-    background-color: var(--color4);
-    display: none;
-}
-header nav ul, footer nav ul {
-    padding: var(--spaceIn);
-    justify-content: space-around;
-}
-header i:hover, footer i:hover {
-    background-color: var(--colorWhitish);
-    transition: var(--transition);
-}
-
-footer {
-    flex-direction: column;
-    align-items: center;
-}
-footer i {
-    padding: var(--spaceIn);
-    color: var(--color4);;
-    border: 2px solid var(--color4);;
-    border-radius: var(--spaceIn);
-}
-footer p {
-    padding: var(--spaceIn) 0;
-    /* justify-content: center; 
-       unecessary, since body is 'space-between' */
-/*}
-
-nav a {
-    color: var(--colorWhitish);
-    text-decoration: none;
-}
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: var(--spaceIn);
-}
-nav ul li {
-    list-style: none;
-    cursor: pointer;
-} */
-
 h1, h2, h3, h4, h5, h6 {
     margin-top: 8px;
     padding: var(--spaceIn);
-    /* border-bottom: 2px solid var(--color4); */
 }
 
 p {
@@ -239,7 +133,6 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
-
 
 .postAuthorImg {
     width: 30px;
