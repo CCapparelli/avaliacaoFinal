@@ -1,4 +1,6 @@
-
+/*
+ 
+*/
 function assureFakeData() {
     var stored = localStorage.getItem('fakeTeam');
     if (!stored) {
@@ -16,8 +18,10 @@ function assureFakeData() {
         team.add(joao);
         team.add(maria);
         team.add(jose);
-        // team.addRange(sergio, alice, elisa, joao, maria, jose);
-        localStorage.setItem('fakeTeam', team.serialize());
+
+        // TODO: 
+        // implementar o metodo/função addRange na classe/tipo Team.
+        // team.addRange([sergio, alice, elisa, joao, maria, jose]);
         
         posts = new Posts();
         posts.add(new Post('Minha viagem ao Japão!', '10/10/2024', '/src/user/img/explore1.jpg', alice));
@@ -27,6 +31,7 @@ function assureFakeData() {
         posts.add(new Post('Rrimeiro post de Maria', '10/10/2024', '/src/user/img/network2.jpg', maria));
         posts.add(new Post('Rrimeiro post do Zé', '10/10/2024', '/src/user/img/network3.jpg', jose));
 
+        localStorage.setItem('fakeTeam', team.serialize());
         localStorage.setItem('fakePosts', posts.serialize());
     } 
 }

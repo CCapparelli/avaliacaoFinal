@@ -2,8 +2,11 @@
 * um blog é um conjunto (array) de posts
 * um post tem um título, um autor, uma data de publicação, uma imagem, um sumário e 
 *             conteúdo (um conjunto de parágrafos)
-* um time é um conjunto (array) de pessoas / membros
-* cada membro tem um conjunto (array) de post
+*
+* um time é um conjunto (array) de pessoas / membros (team members)
+*
+* Este site disponibiliza uma série de posts publicados pelos membros de sua equipe (time)
+*
 */
 
 class TeamMember {
@@ -29,7 +32,8 @@ class Team {
         member.id = this.#nextId();
         this.teamMembers.push(member);
     }
-    addRange = (members) => members.each((_,member) => this.add(member));
+
+    //addRange = (members) => members.each((_,member) => this.add(member));
 
     remove(member) {
         if (this.teamMembers.includes(member)) {
