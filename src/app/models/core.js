@@ -10,10 +10,10 @@
 */
 
 class TeamMember {
-    constructor(name, fotoFullPath) {
-        this.id         = Number(-1);
-        this.name       = '' + name;
-        this.fotoPath   = '' + fotoFullPath;
+    constructor(name, imagem) {
+        this.id       = Number(-1);
+        this.name     = '' + name;
+        this.imagem   = '' + imagem;
     }
     static assureName(nameValue) {
         if (nameValue.length < 3) {
@@ -33,7 +33,11 @@ class Team {
         this.teamMembers.push(member);
     }
 
-    //addRange = (members) => members.each((_,member) => this.add(member));
+    addRange(members) {
+        for (let i = 0; i < members.length; i++) {
+            this.add(members[i]);
+        }
+    }
 
     remove(member) {
         if (this.teamMembers.includes(member)) {
@@ -107,6 +111,7 @@ class Post {
     }
    
 }
+
 class Posts {
     constructor() {
         this.items = [];

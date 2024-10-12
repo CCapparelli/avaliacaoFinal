@@ -75,8 +75,6 @@ input {
     width: 50%;
     height: 200px;
     border-radius: 20px;
-    /* background-color: var(--color4); */
-    /* background-image: url(/src//user/img/exploreMundo.jpg); */
     background-size: cover;
 }
 .carousel {
@@ -95,12 +93,6 @@ input {
     width: 50%;
     height: 400px;
     overflow-y: scroll;
-}
-.postInfo {
-    color: var(--colorWB4);
-}
-.postOK {
-    color: var(--color6);
 }
 .postImg {
     width: 150px;
