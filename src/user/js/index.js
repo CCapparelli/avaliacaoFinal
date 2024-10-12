@@ -5,10 +5,10 @@ $(window).ready(function() {
 //
 // Configurando os temas (dark e light)...
 //
-const network     = document.getElementById('network');
-const world       = document.getElementById('world');
-var colorBinder   = new ColorBinder([world, network], defaultScheme);
-var homeToggler   = new ThemeToggler(body, btnToggleTheme, [colorBinder]);
+const network       = document.getElementById('network');
+const world         = document.getElementById('world');
+const colorBinder   = new ColorBinder([world, network], defaultScheme);
+const homeToggler   = new ThemeToggler(body, btnToggleTheme, [colorBinder]);
 
 //
 // Carregando os dados de post armazenados localmente...
@@ -53,6 +53,4 @@ function verPost(id) {
     storage.setCurrentPost(id);
     window.location.href = 'src/user/pages/posts/';
 }
-
-// /
 
