@@ -20,9 +20,15 @@ class Storage {
         localStorage.setItem(this.darkThemeKey, value);
         this.darkTheme = localStorage.getItem(this.darkThemeKey);
     }
-    setCurrentPost(id) {
-        localStorage.setItem(this.currentPostIdKey, id);
+    currentPost = () => { 
         this.currentPostId = localStorage.getItem(this.currentPostIdKey);
+        var result = this.postItems.filter(x => x.id === Number(this.currentPostId))[0];
+        return result;
+    }
+
+    setCurrentPost(id) {
+        localStorage.setItem(this.currentPostIdKey, Number(id));
+        this.currentPostId = Number(localStorage.getItem(this.currentPostIdKey));
     }
     toggleTheme() {
         this.darkTheme = !this.darkTheme;
@@ -50,12 +56,12 @@ class Storage {
         var team = new Team();
         var posts = new Posts();
         
-        var sergio  = new TeamMember('Sérgio', '/src/user/img/original/time/sergio.jpg');
-        var alice   = new TeamMember('Alice', '/src/user/img/original/time/alice.jpg');
-        var elisa   = new TeamMember('Elizabeth', '/src/user/img/original/time/elizabeth.jpg');
-        var joao    = new TeamMember('João', '/src/user/img/network1.jpg');
-        var maria   = new TeamMember('Maria', '/src/user/img/network2.jpg');
-        var jose    = new TeamMember('José', '/src/user/img/network3.jpg');
+        var sergio  = new TeamMember('Sérgio', 'original/time/sergio.jpg');
+        var alice   = new TeamMember('Alice', 'original/time/alice.jpg');
+        var elisa   = new TeamMember('Elizabeth', 'original/time/elizabeth.jpg');
+        var joao    = new TeamMember('João', 'network1.jpg');
+        var maria   = new TeamMember('Maria', 'network2.jpg');
+        var jose    = new TeamMember('José', 'network3.jpg');
         team.addRange([alice, sergio, elisa, joao, maria, jose]);
         
         var members = team.teamMembers;
