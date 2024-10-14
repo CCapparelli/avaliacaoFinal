@@ -1,6 +1,6 @@
 class BlogComposer {
     constructor(parent) {
-        this.imagePath  = '../../img/'
+        this.imagePath  = '../../img/';
         this.parent     = parent;
         this.carousel   = this.#addCarousel();
         this.postsTitle = this.#addTitle();

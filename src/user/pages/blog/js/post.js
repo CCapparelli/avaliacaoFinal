@@ -15,7 +15,7 @@ class PostBinder {
                     <span class="py-1 px-2 small hashtag cHand rounded">JAPÃO</span>
                 </div>
                 <h3 id="postTitle" class="postTitle m-0 p-0 mt-2 mb-3">${post.titulo}</h3>
-                <img class="postImage rounded-2" src="${this.imagePath}${post.imagem}" alt="">
+                <img class="postImage rounded-2" src="${this.imagePath + post.imagem}" alt="">
                 <p id="postDesc" class="memberTitle fw-bold">${post.sumario}</p>
                 <div>`;
         
@@ -31,7 +31,7 @@ class PostBinder {
             </div>
             <div class="postAuthor d-flex flex-column justify-content-start align-items-center gap-2 me-2">
                 <h3 id="memberName" class="m-0 p-0 mt-2 memberName">SOBRE O AUTOR</h3>
-                <img class="postAuthorImg rounded-2" src="${this.imagePath}${post.author.imagem}" alt="">
+                <img class="postAuthorImg rounded-2" src="${this.imagePath + post.author.imagem}" alt="">
                 <p class="fs-4">Olá eu sou ${post.author.name}!</p>
             </div>`;
         this.element.innerHTML = content;
