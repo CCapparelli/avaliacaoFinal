@@ -1,5 +1,6 @@
 class BlogComposer {
     constructor(parent) {
+        this.imagePath  = '../../img/'
         this.parent     = parent;
         this.carousel   = this.#addCarousel();
         this.postsTitle = this.#addTitle();
@@ -31,100 +32,36 @@ class BlogComposer {
         return title;
     }  
     #addPosts() {
-        var classes = 'posts w-100 d-flex flex-row flex-wrap gap-3 p-3 justify-content-center';
-        var section = new Section('posts', classes, this.parent);
-        section.html(`
+        var classes = 'blog w-100 d-flex flex-row flex-wrap gap-3 p-3 justify-content-center';
+        var section = new Section('blog', classes, this.parent);
+
+        var data = storage.postItems;
+        var host = document.getElementById('blog');
+
+        host.innerHTML = '';
+        for (let i = 0; i < data.length; i++) {
+            const post = data[i];
+            host.innerHTML += `
             <div class="post d-flex gap-2 p-3 rounded">
-                <a onclick="blogPage.verPost(1);"><img class="postImg rounded-2" src="../../../user/img/explore1.jpg" alt=""></a>
-                <div class="d-flex flex-column justify-content-between">
-                    <div class="postInfo postOK">
-                        <h6 class="exploreName p-0 m-0 fs-5 fw-bold">Minha viagem ao Japão!</h6>
-                        <p class="exploreSubTitle p-0 m-0 fst-italic small">Data da postagem: 09/10/2024</p>
-                        <p class="exploreDesc p-0 m-0 mt-1 small align text-start">Breve introdução e comentários em relação ao conteúdo do post.</p>
+                <a onclick="blogPage.verPost(${post.id});"><img class="postImg rounded-2" src="${this.imagePath + post.imagem}" alt=""></a>
+                <div class="d-flex flex-column justify-content-between"> 
+                    <div class="">
+                        <a onclick="blogPage.verPost(${post.id});">
+                            <h6 class="postAuthorName p-0 m-0 fs-5 fw-bold">${post.titulo}</h6>
+                            <p class="postDate p-0 m-0 fst-italic small">Data da postagem: ${post.dataPublicacao}</p>
+                            <p class="postSummary p-0 m-0 mt-1 small align text-start">${post.sumario}</p>
+                        </a> 
                     </div>
-                    <div class="postInfo postAuthor postOK">
-                        <a href="../../../user/pages/posts/">
-                            <img class="postAuthorImg" src="../../../user/img/original/time/alice.jpg" alt="">
-                            <span>Posted by Alice</span>
+                    <div class="postAuthor ">
+                        <a onclick="blogPage.verPost(${post.id});">
+                            <img class="postAuthorImg" src="${this.imagePath + post.author.imagem}" alt="">
+                            <span>Posted by ${post.author.name}</span>
                         </a>
-                    </div>
+                    </div>                
                 </div>
             </div>
-
-            <div class="post d-flex gap-2 p-3 rounded">
-                <a onclick="blogPage.verPost(2);"><img class="postImg rounded" src="../../../user/img/explore2.jpg" alt=""></a>
-                <div class="d-flex flex-column justify-content-between">
-                    <div class="postInfo">
-                        <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
-                        <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
-                        <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
-                    </div>
-                    <div class="postInfo postAuthor">
-                        <img class="postAuthorImg" src="../../../user/img/original/time/elizabeth.jpg" alt="">
-                        <span>Post por Elizabeth</span>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="post d-flex gap-2 p-3 rounded">
-                <a onclick="blogPage.verPost(3);"><img class="postImg rounded" src="../../../user/img/explore3.jpg" alt=""></a>
-                <div class="d-flex flex-column justify-content-between">
-                    <div class="postInfo">
-                        <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
-                        <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
-                        <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
-                    </div>
-                    <div class="postInfo postAuthor">
-                        <img class="postAuthorImg" src="../../../user/img/original/time/sergio.jpg" alt="">
-                        <span>Post por Sergio</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="post d-flex gap-2 p-3 rounded">
-                <a onclick="blogPage.verPost(4);"><img class="postImg rounded" src="../../../user/img/network1.jpg" alt=""></a>
-                <div class="d-flex flex-column justify-content-between">
-                    <div class="postInfo">
-                        <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
-                        <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
-                        <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
-                    </div>
-                    <div class="postInfo postAuthor">
-                        <img class="postAuthorImg" src="../../../user/img/network1.jpg" alt="">
-                        <span>Post por João</span>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="post d-flex gap-2 p-3 rounded">
-                <a onclick="blogPage.verPost(5);"><img class="postImg rounded" src="../../../user/img/network2.jpg" alt=""></a>
-                <div class="d-flex flex-column justify-content-between">
-                    <div class="postInfo">
-                        <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
-                        <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
-                        <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
-                    </div>
-                    <div class="postInfo postAuthor">
-                        <img class="postAuthorImg" src="../../../user/img/network2.jpg" alt="">
-                        <span>Post por Maria</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="post d-flex gap-2 p-3 rounded">
-                <a onclick="blogPage.verPost(6);"><img class="postImg rounded" src="../../../user/img/network3.jpg" alt=""></a>
-                <div class="d-flex flex-column justify-content-between">
-                    <div class="postInfo">
-                        <h6 class="exploreName p-0 m-0 fs-5 fw-bold">NOME LUGAR</h6>
-                        <p class="exploreSubTitle p-0 m-0 fst-italic small">SUBTITULO</p>
-                        <p class="exploreDesc p-0 m-0 mt-1 small align text-start">LOREM</p>
-                    </div>
-                    <div class="postInfo postAuthor">
-                        <img class="postAuthorImg" src="../../../user/img/network3.jpg" alt="">
-                        <span>Post por José</span>
-                    </div>
-                </div>
-            </div>`);
+            `;
+        }
         return section;
     }    
 }
@@ -138,6 +75,11 @@ class BlogPage extends Page {
         
         this.colorBinder    = new ColorBinder([this.mainComposer.posts.element], defaultScheme);
         this.themeToggler   = new ThemeToggler([this.colorBinder], this.applyTheme);
+    }
+    
+    verPost(id) {
+        storage.setCurrentPost(id);
+        window.location.href = this.postPageAddr;
     }
 
     applyTheme = function(isDark) {

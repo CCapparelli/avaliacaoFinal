@@ -104,6 +104,7 @@ class HtmlTag {
     }
     init() {
         this.element = document.createElement(this.tag);
+        this.#setId(this.element, this.id);
         this.#setText(this.element, this.text);
         this.#setClasses(this.element, this.classes);
         this.#setAttributes(this.element, this.attributes);
@@ -124,6 +125,11 @@ class HtmlTag {
     html    = (content) => this.element.innerHTML = content
     htmlAdd = (content) => this.element.innerHTML += content
     
+    #setId(element, id) {
+        if (id) {
+            element.id = id;
+        }
+    }
     #setText(element, text) {
         if (text) {
             const node = document.createTextNode(text);
@@ -174,6 +180,7 @@ class HeaderComposer {
         this.parent         = parent;
         this.imgPath        = isRoot ? 'src/user/img/'  : '../../img/';
         this.pagePath       = isRoot ? 'src/user/pages/' : '../../pages/';
+        this.rootPath       = isRoot ? '#' : '../../../../';
 
         this.headerMobile   = this.#addHeaderMobile();
         this.headerPC       = this.#addHeaderPC();
@@ -188,7 +195,7 @@ class HeaderComposer {
             <div class="headerMobileNav">
                 <nav  class="headerMobileNavUL">
                     <ul class="navbar-nav d-flex flex-row gap-3">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"><i class="fa fa-home" title="Home"></i></a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="${this.rootPath}"><i class="fa fa-home" title="Home"></i></a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="${this.pagePath}about/"><i class="fa fa-house-user" title="Sobre a empresa"></i></a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="${this.pagePath}blog/"><i class="fa fa-rss" title="Blog"></i></a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="${this.pagePath}team/"><i class="fa fa-users" title="Nosso time"></i></a></li>,
@@ -216,7 +223,7 @@ class HeaderComposer {
             <div class="headerNav">
                 <nav  class="headerNavUL">
                     <ul class="navbar-nav d-flex flex-row gap-3">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link " aria-current="page" href="${this.rootPath}">Home</a></li>
                         <li class="nav-item"><a class="nav-link " aria-current="page" href="${this.pagePath}about/">Sobre a empresa</a></li>
                         <li class="nav-item"><a class="nav-link " aria-current="page" href="${this.pagePath}blog/">Blog</a></li>
                         <li class="nav-item"><a class="nav-link " aria-current="page" href="${this.pagePath}team/">Nosso time</a></li>

@@ -10,8 +10,7 @@ class TeamComposer {
     constructor(parent) {
         this.parent     = parent;
         this.section    = this.#addSection();
-        this.modal      = this.#addModal();
-    }
+        }
     #addSection() {
         var classes = 'ourTeam container d-flex flex-column p-3 gap-5';
         var section = new Section('ourTeam', classes, this.parent);
@@ -74,11 +73,23 @@ class TeamComposer {
         </div>`);
         return section;
     }    
+
+}
+
+class TeamPage extends Page {
+    constructor() {
+        super();
+        this.headerComposer = new HeaderComposer(this.header);
+        this.mainComposer   = new TeamComposer(this.main);
+        this.themeToggler   = new ThemeToggler();
+        this.modal          = this.#addModal();
+    }
     #addModal() {
         // <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         var classes = 'modal fade';
-        var attributes = ['tabindex="-1"','aria-labelledby="exampleModalLabel"','aria-hidden="true"',];
-        var modal = new HtmlTag('div','exampleModal', classes, attributes, this.parent);
+        var attributes = ['tabindex=-1','aria-labelledby=exampleModalLabel','aria-hidden=true',];
+        // var attributes = ['tabindex="-1"','aria-labelledby="exampleModalLabel"','aria-hidden="true"',];
+        var modal = new HtmlTag('div','exampleModal', classes, attributes, body);
         modal.html(`
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -99,15 +110,6 @@ class TeamComposer {
             </div>
         </div>`);
         return modal;
-    }
-}
-
-class TeamPage extends Page {
-    constructor() {
-        super();
-        this.headerComposer = new HeaderComposer(this.header);
-        this.mainComposer   = new TeamComposer(this.main);
-        this.themeToggler   = new ThemeToggler();
     }
 }
 
